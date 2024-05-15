@@ -1,18 +1,49 @@
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
-    <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
+  <div class="navbar">
+    <div class="navbar-left">
+      <h1>SwimSpots</h1>
+    </div>
+    <div class="navbar-right">
+      <button>Login</button>
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+      title: 'My Website'
+    }
+  },
+  methods: {
+    login() {
+      // Add your login logic here
+      console.log('Login button clicked')
+    }
+  }
+}
+</script>
+
 <style scoped>
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-right {
+  flex: 0;
+}
+
 .item {
   margin-top: 2rem;
   display: flex;
