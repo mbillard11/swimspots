@@ -2,7 +2,7 @@
 
 <template>
   <video autoplay muted loop id="backgroundVideo">
-    <source src="../assets/underwater_loop.mp4" type="video/mp4" />
+    <source src="../assets/underwater_loop_480.mp4" type="video/mp4" />
   </video>
   <div class="landing">
     <div class="card">
@@ -30,9 +30,10 @@
   align-items: center;
   /* padding: 10px; */
   color: blue;
-  height: 30vh;
+  height: 15rem;
   width: 30rem;
   background-color: rgba(255, 255, 255, 0.878);
   border-radius: 30px;
+  box-shadow: 0 3px 10px #8b8eaf;
 }
 </style>
