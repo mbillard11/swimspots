@@ -1,21 +1,38 @@
 <script setup lang="ts"></script>
 
 <template>
+  <video autoplay muted loop id="backgroundVideo">
+    <source src="../assets/underwater_loop.mp4" type="video/mp4" />
+  </video>
   <div class="landing">
-    <font-awesome-icon icon="fa-solid fa-person-swimming" />
-    <h1>Welcome to SwimSpots</h1>
-    Coming soon
+    <div class="card">
+      <font-awesome-icon icon="fa-solid fa-lg fa-person-swimming" size="2x" />
+      <h1>Welcome to SwimSpots</h1>
+      Coming soon
+    </div>
   </div>
 </template>
 
 <style scoped>
-.landing {
+#backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+}
+.card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  color: #fff;
-  height: 100vh;
+  /* padding: 10px; */
+  color: blue;
+  height: 30vh;
+  width: 30rem;
+  background-color: rgba(255, 255, 255, 0.878);
+  border-radius: 30px;
 }
 </style>
