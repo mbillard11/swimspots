@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import InterestedButton from './InterestedButton.vue'
+</script>
 
 <template>
   <video autoplay muted loop id="backgroundVideo">
@@ -10,6 +12,8 @@
       <h1>Welcome to SwimSpots</h1>
       Coming soon
     </div>
+
+    <interested-button></interested-button>
   </div>
 </template>
 
@@ -22,6 +26,12 @@
   height: 100vh;
   z-index: -1;
   object-fit: cover;
+}
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .card {
   display: flex;
