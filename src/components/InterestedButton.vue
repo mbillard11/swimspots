@@ -47,7 +47,7 @@ const onSubmit = async () => {
       message: message.value,
       _botpoison: solution
     })
-    alert('Form submitted')
+    alert("Thanks for your interest! We'll notify you when SwimSpots is live.")
     message.value = ''
   } catch (error) {
     alert('Error submitting form')

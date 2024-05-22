@@ -46,4 +46,12 @@ import InterestedButton from './InterestedButton.vue'
   border-radius: 30px;
   box-shadow: 0 3px 10px #8b8eaf;
 }
+
+@media only screen and (max-width: 900px) {
+  .card {
+    height: 15rem;
+    width: 90vw;
+    max-width: 30rem;
+  }
+}
 </style>
