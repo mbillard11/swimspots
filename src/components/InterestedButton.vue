@@ -1,29 +1,54 @@
-<script lang="ts">
+<template>
+  <div class="middle">
+    <!-- O81leMbC4 -->
+    <form @submit.prevent="onSubmit">
+      <input
+        type="email"
+        v-model="message"
+        name="email"
+        class="email-field"
+        id="email-field"
+        placeholder="Interested?"
+      />
+      <button type="submit" name="subscribe" id="subscribe-button" :disabled="submitting">
+        Subscribe
+      </button>
+    </form>
+  </div>
+</template>
+
+<script setup lang="ts">
 import $ from 'jquery'
 import axios from 'axios'
 import { ref } from 'vue'
+import { useFormspark } from '@formspark/vue-use-formspark'
 
-// 1. Import the library
+// Import the library
 import Botpoison from '@botpoison/browser'
 
 const botpoison = new Botpoison({
   publicKey: 'pk_83034857-06ff-4006-9c88-c584e080650c'
 })
 
-const message = ref(null)
+const message = ref('')
 const loading = ref(false)
+
+const [submit, submitting] = useFormspark({
+  formId: 'O81leMbC4'
+})
 
 const onSubmit = async () => {
   loading.value = true
   try {
     // Process a challenge
     const { solution } = await botpoison.challenge()
-    await axios.post('https://example.demo/', {
+    // Send data to server using Axios
+    await axios.post('https://submit-form.com/O81leMbC4', {
       message: message.value,
       _botpoison: solution
     })
     alert('Form submitted')
-    message.value = null
+    message.value = ''
   } catch (error) {
     alert('Error submitting form')
   } finally {
@@ -41,24 +66,6 @@ $(document).ready(function () {
   })
 })
 </script>
-
-<template>
-  <div class="middle">
-    <!-- O81leMbC4 -->
-    <form action="https://submit-form.com/O81leMbC4">
-      <input
-        type="email"
-        value=""
-        name="email"
-        class="email-field"
-        id="email-field"
-        placeholder="Interested?"
-      />
-
-      <button type="submit" value="Subscribe" name="subscribe" id="subscribe-button" class="" />
-    </form>
-  </div>
-</template>
 
 <style scoped>
 /* style input field text */
