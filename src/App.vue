@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import LandingPage from './components/LandingPage.vue'
-import Navbar from './components/Navbar.vue'
+import Menubar from 'primevue/menubar'
+
+// Define the 'items' property
+const items = [
+  { label: 'Home', icon: 'pi pi-fw pi-home' },
+  { label: 'About', icon: 'pi pi-fw pi-info-circle' }
+  // Add more items as needed
+]
 </script>
 
 <template>
-  <Navbar></Navbar>
+  <Menubar :model="items" />
   <LandingPage></LandingPage>
   <RouterView />
 </template>

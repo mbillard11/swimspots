@@ -10,7 +10,7 @@ import VueAxios from 'vue-axios'
 
 // Import PrimeVue
 import PrimeVue from 'primevue/config'
-import Lara from '@/presets/lara' //import preset
+import Lara from '@/presets/ts/lara' //import preset
 
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
