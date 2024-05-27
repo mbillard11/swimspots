@@ -76,7 +76,7 @@ $(document).ready(function () {
 
 /* Input field that looks like a button */
 .email-field {
-  width: 80px;
+  width: 180px;
   display: inline-block;
   color: #f4f2ca;
   text-align: center;
@@ -99,7 +99,7 @@ $(document).ready(function () {
 
 /* after button is clicked */
 .email-field.active {
-  width: 200px;
+  width: 300px;
   outline: none;
   color: #efaa9d;
   text-align: left;
@@ -136,5 +136,11 @@ $(document).ready(function () {
 
 .middle {
   padding-top: 5rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .email-field.active {
+    width: 240px;
+  }
 }
 </style>

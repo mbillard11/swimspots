@@ -9,7 +9,7 @@ import InterestedButton from './InterestedButton.vue'
   <div class="landing">
     <div class="card">
       <font-awesome-icon icon="fa-solid fa-lg fa-person-swimming" size="2x" />
-      <h1>Welcome to SwimSpots</h1>
+      <h1 class="text-3xl">Welcome to SwimSpots</h1>
       Coming soon
     </div>
 

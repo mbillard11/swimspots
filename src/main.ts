@@ -8,6 +8,10 @@ import router from './router'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 
+// Import PrimeVue
+import PrimeVue from 'primevue/config'
+import Lara from '@/presets/lara' //import preset
+
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faPersonSwimming } from '@fortawesome/free-solid-svg-icons'
@@ -28,5 +32,9 @@ const app = createApp(App)
 app.use(VueAxios, axios)
 app.component('font-awesome-icon', FontAwesomeIcon)
 app.use(router)
+app.use(PrimeVue, {
+  unstyled: true,
+  pt: Lara
+})
 
 app.mount('#app')
