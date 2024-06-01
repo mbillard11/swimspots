@@ -1,54 +1,17 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import LandingPage from './components/LandingPage.vue'
-import NavBar from './components/NavBar.vue';
-// import Menubar from 'primevue/menubar'
-
+import AppHeader from './components/AppHeader.vue'
 </script>
 
 <template>
-  <!-- Import Navbar on login -->
-  <NavBar></NavBar>
+  <AppHeader></AppHeader>
   <LandingPage></LandingPage>
   <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
+@import './assets/main.css';
 @media (min-width: 1024px) {
   header {
     display: flex;
